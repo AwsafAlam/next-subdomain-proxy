@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const { withSentryConfig } = require('@sentry/nextjs');
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -14,7 +13,7 @@ const nextConfig = {
     locales: ['en-US'],
     defaultLocale: 'en-US',
   },
-  async rewrites() {
+  rewrites() {
     return {
       beforeFiles: [
         {
@@ -22,7 +21,7 @@ const nextConfig = {
           destination: 'https://blog.boomershub.com',
         },
         {
-          source: '/blog/:path*',
+          source: '/:path*',
           has: [
             {
               type: 'host',
@@ -33,57 +32,6 @@ const nextConfig = {
         },
       ],
     };
-  },
-  // === ---
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/blog/category/resources',
-  //       destination: 'https://blog.boomershub.com',
-  //     },
-  //     {
-  //       source: '/blog/sitemap.xml',
-  //       destination: 'https://blog.boomershub.com/sitemap.xml',
-  //     },
-  //     {
-  //       source: '/blog',
-  //       destination: 'https://blog.boomershub.com',
-  //     },
-  //     {
-  //       source: '/:path*',
-  //       has: [
-  //         {
-  //           type: 'host',
-  //           value: 'blog.boomershub.com',
-  //         },
-  //       ],
-  //       destination: '/blog/:path*',
-  //     },
-  //   ];
-  // },
-  // ------=========---
-  //   return {
-  //     beforeFiles: [
-  //       {
-  //         source: '/:path*',
-  //         has: [
-  //           {
-  //             type: 'host',
-  //             value: 'blog.boomershub.com',
-  //           },
-  //         ],
-  //         destination: '/blog/:path*',
-  //       },
-  //       {
-  //         source: '/blog',
-  //         destination: 'https://blog.boomershub.com',
-  //       },
-  //     ],
-  //   };
-  // },
-  sentry: {
-    hideSourceMaps: false,
-    autoInstrumentServerFunctions: true,
   },
   async headers() {
     return [
@@ -112,15 +60,5 @@ const nextConfig = {
   },
 };
 
-const sentryWebpackPluginOptions = {
-  silent: true, // Suppresses all logs
-  // For all available options, see:
-  // https://github.com/getsentry/sentry-webpack-plugin#options.
-};
-
-// Make sure adding Sentry options is the last code to run before exporting, to
-// ensure that your source maps include changes from all other Webpack plugins
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
-
 // module.exports = withBundleAnalyzer(nextConfig);
-// module.exports = nextConfig;
+module.exports = nextConfig;

@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import NProgress from 'nprogress';
 import '../styles/nprogress.css';
 import '../styles/globals.css';
-import 'assets/template/App.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
 
