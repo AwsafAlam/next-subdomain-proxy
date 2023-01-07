@@ -8,11 +8,20 @@ type Props = {
 const links = [
   {
     url: '/blog/category/resources',
-    text: 'Senior Living Resources',
+    text: 'Senior Living Resources.  Should rewrite => [https://blog.boomershub.com/category/resources]',
   },
-  { url: '/blog/veterans-benefits-long-term-care', text: 'Veterans Benefits Guide' },
-  { url: '/blog/medicare-benefits-guide', text: 'Medicare Benefits Guide' },
-  { url: '/blog/a-beginners-guide-to-medicaid', text: 'Medicaid Benefits Guide' },
+  {
+    url: '/blog/veterans-benefits-long-term-care',
+    text: 'Veterans Benefits Guide. Should rewrite => [https://blog.boomershub.com/veterans-benefits-long-term-care]',
+  },
+  {
+    url: '/blog/medicare-benefits-guide',
+    text: 'Medicare Benefits Guide Should rewrite => [https://blog.boomershub.com/medicare-benefits-guide]',
+  },
+  {
+    url: '/blog/a-beginners-guide-to-medicaid',
+    text: 'Medicaid Benefits Guide Should rewrite => [https://blog.boomershub.com/a-beginners-guide-to-medicaid]',
+  },
   { url: '/blog', text: 'Blog' },
 ];
 
