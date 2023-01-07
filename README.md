@@ -5,9 +5,8 @@ A simple package for proxying subdomains in a Next.js app.
 
 ### Installation
 
-```js
-npm install next-subdomain-proxy
-```
+- `npm install`
+- `npm run dev`
 
 ### Usage
 
