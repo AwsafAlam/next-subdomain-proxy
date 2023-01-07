@@ -1,0 +1,19 @@
+{
+  "printWidth": 100,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "tabWidth": 2,
+  "htmlWhitespaceSensitivity": "strict",
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    }
+  ]
+}

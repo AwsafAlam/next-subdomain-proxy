@@ -1,0 +1,137 @@
+// @import "../custom-variables";
+
+.error-wrap {
+  position: relative;
+  height: 100%;
+  background-color: #eceae8;
+}
+
+.error-page {
+  height: 100vh;
+  padding: 10px;
+
+  .error-page-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .error-page-content-wrapper {
+      .error-page-content-header {
+        .error-page-content {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.error-page-body {
+  padding-top: 20%;
+  padding-bottom: 20%;
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 30%;
+}
+
+.error-page-body .notfound-404 {
+  position: relative;
+  height: 240px;
+}
+
+.error-page-body .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 252px;
+  font-weight: 900;
+  margin: 0px;
+  color: #262626;
+  text-transform: uppercase;
+  letter-spacing: -40px;
+  margin-left: -20px;
+}
+
+.error-page-body .notfound-404 h1>span {
+  text-shadow: -8px 0px 0px #F96472;
+}
+
+.error-page-body .notfound-404 h3 {
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #262626;
+  margin: 0px;
+  letter-spacing: 3px;
+  padding-left: 6px;
+}
+
+.error-page-body h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 850px){
+.error-page-body {
+    margin-left: 20%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  
+  .error-page-body .notfound-404 {
+    height: 200px;
+  }
+
+  .error-page-body .notfound-404 h1 {
+    font-size: 200px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .error-page-body {
+      margin-left: 0%;
+    }
+  .error-page-body .notfound-404 {
+    height: 162px;
+  }
+
+  .error-page-body .notfound-404 h1 {
+    font-size: 162px;
+    height: 150px;
+    line-height: 162px;
+  }
+
+  .error-page-body h2 {
+    font-size: 12px;
+  }
+}
+
+.redirect-homepage-link-wrapper {
+  .link-icon {
+    margin-right: 5px;
+  }
+
+  .redirect-homepage-link {
+    color: #F96472;
+    font-weight: 600;
+
+    &:hover {
+      color: darken(#F96472, 10%)
+    }
+  }
+}
