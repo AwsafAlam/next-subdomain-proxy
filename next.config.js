@@ -21,14 +21,8 @@ const nextConfig = {
           destination: 'https://blog.boomershub.com',
         },
         {
-          source: '/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'blog.boomershub.com',
-            },
-          ],
-          destination: '/blog/:path*',
+          source: '/blog/:path*',
+          destination: 'https://blog.boomershub.com/:path*',
         },
       ],
     };
